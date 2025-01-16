@@ -1,32 +1,39 @@
-# Network-Analyzer
-School project 
+# Network-Analyzer - School Project
 
-Utilisation du code :
+## Code Usage:
+To generate and build the executable:
+```bash
+make
+```
 
-Pour générer l'éxécutable : Taper make pour générer l'executable   
-Pour lancer le programme :   
-Taper ./all -i <interface> -v<1 2 ou 3> -o <nom du fichier> -f <filtre>   
+To execute the program:
+```bash
+ ./all -i <interface> -v<1 2 or 3> -o <filename> -f <filter> 
+```
+However, it is not mandatory to include all options. In this case, default parameters will be applied.
 
-Mais ce n'est pas obligatoire de taper toutes les options, dans ce cas là les paramètres par défault seront appliqués. 
+### Features:
+The following four options -i, -o, -v, and -f are available:
 
-Réalisation :
+- -o: Allows reading a pcap file and decoding frames (useful for testing specific protocols).
+- -i: Allows you to choose the interface to listen on.
+- -v: Allows you to select the verbosity level (1: very concise by default).
+- -f: Allows you to filter traffic.
+  
+### Supported Protocols:
+The following protocols are supported and processed:
 
-On a la présence des quatres options -i -o -v -f fonctionnelles :  
--o : Permet de lire un fichier pcap et de décoder les trames (utile pour le test de protocoles précis)                                       -i : Permet pour choisir l'interface que l'on écoute   
--v : Permet de choisir la verbosité (1 : très concis par défault)  
--f : Permet de filtrer   
+- Ethernet
+- IP
+- UDP
+- TCP
+- ICMP
+- ARP
+- BOOTP and DHCP
+- DNS
+- HTTP(S)
+- FTP (server and client)
+- SMTP(S)
+- Telnet
+- POP/IMAP (detection and hexadecimal/ASCII display)
 
-Les protocoles suivants on été traités :   
-_ Ethernet  
-_ IP  
-_ UDP  
-_ TCP   
-_ ICMP  
-_ ARP  
-_ BOOTP et DHCP  
-_ DNS  
-_ HTTP(S)  
-_ FTP (serveur et client)  
-_ SMTP(S)  
-_ Telnet   
-_ POP/IMAP (détection et affichage héxa/ascii)  
